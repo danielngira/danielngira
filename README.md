@@ -1,74 +1,48 @@
-# React + TypeScript + Vite
+# Hi, I'm Daniel Ngira
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a software engineer and University of Chicago graduate building product-focused software, cloud infrastructure, and AI-enabled applications.
 
-Currently, two official plugins are available:
+I enjoy working across the stack: turning ambiguous product ideas into shipped features, designing maintainable backend and cloud systems, and building interfaces that make technical workflows easier to use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What I'm focused on
 
-## React Compiler
+- Full-stack and product engineering
+- Cloud infrastructure, CI/CD, and developer tooling
+- AI-assisted applications and workflow automation
+- Systems projects that make core computer science concepts concrete
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Experience
 
-## Expanding the ESLint configuration
+**Software Engineering Intern — Mila Support**  
+Built features for an AI-powered doula mobile app using React Native, TypeScript, and Supabase. Worked on scheduling flows, privacy and notification settings, personalized weekly care plans, partner-sharing features, and AI-generated summaries and guidance.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Software Engineering Intern — GridLink**  
+Designed and provisioned modular AWS infrastructure with CDK in TypeScript. Built multi-environment deployment architecture across frontend, backend, logging, and shared infrastructure stacks, with RDS, CloudFront, Route 53, Lambda, CloudWatch, Slack alerts, and GitHub Actions CI/CD.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Selected projects
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**LEGv8 / ARM64 Simulator**  
+A processor simulation project modeling a 5-stage pipeline with hazard detection, forwarding, branch handling, data-cache behavior, performance counters, and trace logging.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**College Life Simulator**  
+A React-based simulation game that models a student's daily schedule through dynamic state management, time progression, and custom game logic.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Portfolio Website**  
+This repository also contains the code for my personal portfolio site, built with React, TypeScript, and Vite.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-My portfolio site
+**Languages:** Python, C, C++, JavaScript, TypeScript, HTML, CSS, C#  
+**Frontend:** React, React Native, Next.js, Vue.js, Tailwind CSS  
+**Backend & Data:** Node.js, Django, PostgreSQL, MySQL, Prisma, Supabase, GraphQL, REST  
+**Cloud & DevOps:** AWS CDK, EC2, S3, RDS, Lambda, CloudFront, Route 53, Docker, GitHub Actions  
+**Libraries & Tools:** pandas, React Query, Redux Toolkit, Axios
+
+## Contact
+
+- Email: [danielngira@uchicago.edu](mailto:danielngira@uchicago.edu)
+- GitHub: [@danielngira](https://github.com/danielngira)
+
+---
+
+I'm currently interested in early-career software engineering roles where I can contribute to product velocity, infrastructure quality, and technically ambitious systems.
