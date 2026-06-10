@@ -4,8 +4,31 @@ import computer from './assets/images/computer.png';
 import harddrive from './assets/images/hard-drive.png';
 import storage from './assets/images/storage.png';
 import internet from './assets/images/internet.png';
+import { useState, useEffect } from 'react';
+
+
+function getLocalTime(){
+    const timeNow = new Date();
+
+  return timeNow.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
 
 function App() {
+    const [time, setTime] = useState("");
+
+    useEffect (() => {
+       const updateTime = () => {
+            setTime(getLocalTime());
+       };
+
+       updateTime();
+       
+       const intervalId = setInterval(updateTime, 60000);
+       return () => clearInterval(intervalId);
+    }, []);
 
   return (
     <>
@@ -52,12 +75,12 @@ function App() {
             <div className='taskbar'>
                 {/*Start Button*/}
                 <div className='start'>
-                    <p className='taskbarText'>START</p>
+                    <p className='taskbarText'>Start</p>
                 </div>
 
                 {/*Clock*/}
                 <div className='clock'>
-                    <p className='taskbarText'>11:05</p>
+                    <p className='taskbarText'>{time}</p>
                 </div>
             </div>
 
