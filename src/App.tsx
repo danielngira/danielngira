@@ -52,15 +52,15 @@ function App() {
             <div className='taskbar'>
                 {/*Start Button*/}
                 <div className='start'>
-                    <p>Start</p>
+                    <p className='taskbarText'>START</p>
                 </div>
 
                 {/*Clock*/}
                 <div className='clock'>
-                    <p>11:05</p>
+                    <p className='taskbarText'>11:05</p>
                 </div>
             </div>
-            
+
         </div>
       </div>
     </>
