@@ -9,6 +9,10 @@ body {
     background-size: cover;
     display: flex;
     box-sizing: border-box;
+    cursor: url('./assets/images/pointer.png'), auto;
+    font-family: "VT323", monospace;
+    font-style: normal;
+    color: white;
 }
 
 .container {
@@ -37,19 +41,41 @@ body {
 
 .folderName {
     margin-top: 2px;
-    color: white;
-    font-family: "VT323", monospace;
-    font-style: normal;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .taskbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background: #245DDA;
+    --taskbar-height: 8vh;
     width: 100vw;
-    height: 50px;
+    height: var(--taskbar-height);
     margin: 0px;
     border: 0px;
     position: fixed;
     bottom: 0px;
     left: 0px;
+    font-size: 1.5rem;
+}
+
+.start {
+    background: #78ae43;
+    border-radius: 30px;
+    width: 6%;
+    height: 70%;  
+    margin-top: calc(var(--taskbar-height) * 0.15);
+    margin-left: 0.5%;
+    align-content: center;
+}
+
+.clock {
+    background: #64a2d8;
+    width: 8%;
+    height: 70%;
+    margin-top: calc(var(--taskbar-height) * 0.15);
+    margin-right: 0.5%;
+    border-radius: 30px;
+    align-content: center;
 }
