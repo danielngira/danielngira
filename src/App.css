@@ -11,11 +11,23 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    flex-direction: row;
+}
+
 .folderContainer {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100px;
+    position: relative;
+    top: 70px;
+    left: 20px;
+    margin: 5px;
+}
+
+.folderContainer:hover{
+    cursor: pointer;
 }
 
 .icon {
@@ -24,9 +36,20 @@ body {
 }
 
 .folderName {
-    margin-top: 0px;
+    margin-top: 2px;
     color: white;
     font-family: "VT323", monospace;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+.taskbar {
+    background: #245DDA;
+    width: 100vw;
+    height: 50px;
+    margin: 0px;
+    border: 0px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
