@@ -1,109 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=VT323&display=swap');
-@import url('https://fonts.gstatic.com');
-@import url('https://fonts.googleapis.com');
+@import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=VT323&display=swap");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com");
 
-html{
-    cursor: url('./assets/images/pointer.png'), auto;
+html {
+  cursor: url("./assets/images/pointer.png"), auto;
 }
 
 body {
-    background-image: url('./assets/images/bliss.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    box-sizing: border-box;
-    font-family: "VT323", monospace;
-    font-style: normal;
-    color: white;
+  background-image: url("./assets/images/bliss.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+  font-style: normal;
+  color: white;
 }
 
 .container {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .folderContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    position: relative;
-    top: 70px;
-    left: 20px;
-    margin: 5px;
-    align-content: center;
-    text-align: middle;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  position: relative;
+  top: 70px;
+  left: 20px;
+  margin: 5px;
+  align-content: center;
+  text-align: middle;
 }
 
-.folderContainer:hover{
-    cursor: pointer;
+.folderContainer:hover {
+  cursor: pointer;
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .folderName {
-    margin-top: 2px;
-    font-size: 1.25rem;
+  margin-top: 2px;
+  font-size: 1.25rem;
 }
 
 .taskbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #245DDA;
-    background: linear-gradient(180deg, rgba(75, 134, 245, 1) 0%, rgba(47, 111, 232, 1) 18%, rgba(36, 93, 218, 1) 45%, rgba(29, 79, 194, 1) 72%, rgba(18, 58, 154, 1) 100%);
-    --taskbar-height: 8vh;
-    width: 100vw;
-    height: var(--taskbar-height);
-    margin: 0px;
-    border: 0px;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #245dda;
+  background: linear-gradient(
+    180deg,
+    rgba(75, 134, 245, 1) 0%,
+    rgba(47, 111, 232, 1) 18%,
+    rgba(36, 93, 218, 1) 45%,
+    rgba(29, 79, 194, 1) 72%,
+    rgba(18, 58, 154, 1) 100%
+  );
+  --taskbar-height: 8vh;
+  width: 100vw;
+  height: var(--taskbar-height);
+  margin: 0px;
+  border: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  font-size: 1.5rem;
 }
 
 .start {
-    background: #78ae43;
-    cursor: pointer;
-    background: linear-gradient(180deg,
-                #C8F28A 0%,
-                #A9DA69 12%,
-                #78AE43 42%,
-                #5E9B31 70%,
-                #347018 100%);
-    border-radius: 30px;
-    width: 6%;
-    height: 70%;  
-    margin-top: calc(var(--taskbar-height) * 0.15);
-    margin-bottom: calc(var(--taskbar-height) * 0.075);
-    margin-left: 0.5%;
-    align-content: center;
-    text-align: center;
+  background: #78ae43;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    #c8f28a 0%,
+    #a9da69 12%,
+    #78ae43 42%,
+    #5e9b31 70%,
+    #347018 100%
+  );
+  border-radius: 30px;
+  width: 6%;
+  height: 70%;
+  margin-top: calc(var(--taskbar-height) * 0.15);
+  margin-bottom: calc(var(--taskbar-height) * 0.075);
+  margin-left: 0.5%;
+  align-content: center;
+  text-align: center;
 }
 
 .clock {
-    background: #64a2d8;
-    cursor: pointer;
-    background: linear-gradient(180deg,
-                #8ECBF0 0%,
-                #72B5E2 25%,
-                #64A2D8 50%,
-                #4D8FC7 78%,
-                #3978B1 100%);
-    width: 8%;
-    height: 70%;
-    margin-top: calc(var(--taskbar-height) * 0.15);
-    margin-bottom: calc(var(--taskbar-height) * 0.075);
-    margin-right: 0.5%;
-    border-radius: 30px;
-    align-content: center;
-    text-align: center;
+  background: #64a2d8;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    #8ecbf0 0%,
+    #72b5e2 25%,
+    #64a2d8 50%,
+    #4d8fc7 78%,
+    #3978b1 100%
+  );
+  width: 8%;
+  height: 70%;
+  margin-top: calc(var(--taskbar-height) * 0.15);
+  margin-bottom: calc(var(--taskbar-height) * 0.075);
+  margin-right: 0.5%;
+  border-radius: 30px;
+  align-content: center;
+  text-align: center;
 }
 
-.taskbarText{
-    margin: 0px;
+.taskbarText {
+  margin: 0px;
 }
