@@ -3,35 +3,30 @@
 @import url("https://fonts.googleapis.com");
 
 html {
-    cursor: url("./assets/images/pointer.png"), auto;
+  cursor: url("./assets/images/pointer.png"), auto;
 }
 
-body {
-    background-color: #245dda;
-    height: 50vh;
-    width: 70vw;
-    border-radius: 5px;
-    background-size: cover;
-    display: flex;
-    box-sizing: border-box;
-    font-family: "VT323", monospace;
-    font-style: normal;
-    color: white;
-    display: none;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
+modalContainer {
+  background-color: #245dda;
+  height: 50vh;
+  width: 70vw;
+  border-radius: 5px;
+  background-size: cover;
+  display: flex;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+  font-style: normal;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
 .folderBody {
-    background-color: white;
-    display: grid;
+  background-color: white;
+  display: grid;
 }

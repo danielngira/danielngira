@@ -1,15 +1,23 @@
 import "./Modal.css";
 
-function Modal() {
-    return(
-        <>
-            <div className="container">
-                <div className="header">
+type ModalProps = {
+  currentlyOpenWindow: string;
+};
 
-                </div>
-            </div>
-        </>
-    );
+function Modal({ currentlyOpenWindow }: ModalProps) {
+  return (
+    <>
+      <div className="modalContainer">
+        <div className="header">
+          <p>{currentlyOpenWindow}</p>
+        </div>
+
+        <div className="folderBody">
+          <p>This is the {currentlyOpenWindow} window.</p>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Modal;

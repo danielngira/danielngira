@@ -7,14 +7,16 @@ import internet from "./assets/images/internet.png";
 import { useState, useEffect } from "react";
 import Modal from "./Components/Modal";
 
-enum Folders {
-    Closed,
-    Projects,
-    MyComputer,
-    Media,
-    Resume,
-    ContactMe
-};
+const Folders = {
+  Closed: "Closed",
+  Projects: "Projects",
+  MyComputer: "My Computer",
+  Media: "Media",
+  Resume: "Resume",
+  ContactMe: "Contact Me",
+} as const;
+
+type Folder = (typeof Folders)[keyof typeof Folders];
 
 function getLocalTime() {
   const timeNow = new Date();
@@ -27,14 +29,23 @@ function getLocalTime() {
 
 function App() {
   const [time, setTime] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentlyOpenWindow, setCurrentlyOpenWindow] = useState(Folders.Closed);
+  const [currentlyOpenWindow, setCurrentlyOpenWindow] = useState<Folder>(
+    Folders.Closed,
+  );
 
-  const toggleModal = () => {
-    setIsModalOpen(true);
+  const openWindow = (folder: Folder) => {
+    setCurrentlyOpenWindow(folder);
   };
 
-  {/* Update time every minute*/}
+  /*
+  const closeWindow = () => {
+    setCurrentlyOpenWindow(Folders.Closed);
+  }
+    */
+
+  {
+    /* Update time every minute*/
+  }
   useEffect(() => {
     const updateTime = () => {
       setTime(getLocalTime());
@@ -53,36 +64,53 @@ function App() {
         {/* Icons */}
         <div className="container">
           {/*Projects*/}
-          <button onClick={toggleModal} className="folderContainer">
-              <img src={folder} alt="Folder Icon" className="icon" />
-              <p className="folderName">Projects</p>
+          <button
+            onClick={() => openWindow(Folders.Projects)}
+            className="folderContainer"
+          >
+            <img src={folder} alt="Folder Icon" className="icon" />
+            <p className="folderName">Projects</p>
           </button>
 
-          {isModalOpen && <Modal setIsModalOpen={setIsModalOpen}/>}
-
           {/*Biography about me*/}
-          <button onClick={toggleModal} className="folderContainer">
-              <img src={computer} alt="Computer Icon" className="icon" />
-              <p className="folderName">My Computer</p>
+          <button
+            onClick={() => openWindow(Folders.MyComputer)}
+            className="folderContainer"
+          >
+            <img src={computer} alt="Computer Icon" className="icon" />
+            <p className="folderName">My Computer</p>
           </button>
 
           {/*Media and Hobbies*/}
-          <button onClick={toggleModal} className="folderContainer">
-              <img src={harddrive} alt="Hard Drive Icon" className="icon" />
-              <p className="folderName">Media</p>
+          <button
+            onClick={() => openWindow(Folders.Media)}
+            className="folderContainer"
+          >
+            <img src={harddrive} alt="Hard Drive Icon" className="icon" />
+            <p className="folderName">Media</p>
           </button>
 
           {/*Resume*/}
-          <button onClick={toggleModal} className="folderContainer">
-                <img src={storage} alt="Storage Icon" className="icon" />
-                <p className="folderName">Resume</p>
+          <button
+            onClick={() => openWindow(Folders.Resume)}
+            className="folderContainer"
+          >
+            <img src={storage} alt="Storage Icon" className="icon" />
+            <p className="folderName">Resume</p>
           </button>
 
           {/*Contact me*/}
-          <button onClick={toggleModal} className="folderContainer">
-              <img src={internet} alt="Internet Explorer Icon" className="icon" />
-              <p className="folderName">Contact Me</p>
+          <button
+            onClick={() => openWindow(Folders.ContactMe)}
+            className="folderContainer"
+          >
+            <img src={internet} alt="Internet Explorer Icon" className="icon" />
+            <p className="folderName">Contact Me</p>
           </button>
+
+          {currentlyOpenWindow !== Folders.Closed && (
+            <Modal currentlyOpenWindow={currentlyOpenWindow} />
+          )}
         </div>
 
         {/*Taskbar*/}
