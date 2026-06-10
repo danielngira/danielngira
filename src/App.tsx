@@ -5,6 +5,16 @@ import harddrive from "./assets/images/hard-drive.png";
 import storage from "./assets/images/storage.png";
 import internet from "./assets/images/internet.png";
 import { useState, useEffect } from "react";
+import Modal from "./Components/Modal";
+
+enum Folders {
+    Closed,
+    Projects,
+    MyComputer,
+    Media,
+    Resume,
+    ContactMe
+};
 
 function getLocalTime() {
   const timeNow = new Date();
@@ -17,7 +27,14 @@ function getLocalTime() {
 
 function App() {
   const [time, setTime] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentlyOpenWindow, setCurrentlyOpenWindow] = useState(Folders.Closed);
 
+  const toggleModal = () => {
+    setIsModalOpen(true);
+  };
+
+  {/* Update time every minute*/}
   useEffect(() => {
     const updateTime = () => {
       setTime(getLocalTime());
@@ -36,34 +53,36 @@ function App() {
         {/* Icons */}
         <div className="container">
           {/*Projects*/}
-          <div className="folderContainer">
-            <img src={folder} alt="Folder Icon" className="icon" />
-            <p className="folderName">Projects</p>
-          </div>
+          <button onClick={toggleModal} className="folderContainer">
+              <img src={folder} alt="Folder Icon" className="icon" />
+              <p className="folderName">Projects</p>
+          </button>
+
+          {isModalOpen && <Modal setIsModalOpen={setIsModalOpen}/>}
 
           {/*Biography about me*/}
-          <div className="folderContainer">
-            <img src={computer} alt="Computer Icon" className="icon" />
-            <p className="folderName">My Computer</p>
-          </div>
+          <button onClick={toggleModal} className="folderContainer">
+              <img src={computer} alt="Computer Icon" className="icon" />
+              <p className="folderName">My Computer</p>
+          </button>
 
           {/*Media and Hobbies*/}
-          <div className="folderContainer">
-            <img src={harddrive} alt="Hard Drive Icon" className="icon" />
-            <p className="folderName">Media</p>
-          </div>
+          <button onClick={toggleModal} className="folderContainer">
+              <img src={harddrive} alt="Hard Drive Icon" className="icon" />
+              <p className="folderName">Media</p>
+          </button>
 
           {/*Resume*/}
-          <div className="folderContainer">
-            <img src={storage} alt="Storage Icon" className="icon" />
-            <p className="folderName">Resume</p>
-          </div>
+          <button onClick={toggleModal} className="folderContainer">
+                <img src={storage} alt="Storage Icon" className="icon" />
+                <p className="folderName">Resume</p>
+          </button>
 
           {/*Contact me*/}
-          <div className="folderContainer">
-            <img src={internet} alt="Internet Explorer Icon" className="icon" />
-            <p className="folderName">Contact Me</p>
-          </div>
+          <button onClick={toggleModal} className="folderContainer">
+              <img src={internet} alt="Internet Explorer Icon" className="icon" />
+              <p className="folderName">Contact Me</p>
+          </button>
         </div>
 
         {/*Taskbar*/}

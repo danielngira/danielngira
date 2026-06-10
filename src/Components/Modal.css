@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=VT323&display=swap");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com");
+
+html {
+    cursor: url("./assets/images/pointer.png"), auto;
+}
+
+body {
+    background-color: #245dda;
+    height: 50vh;
+    width: 70vw;
+    border-radius: 5px;
+    background-size: cover;
+    display: flex;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    font-style: normal;
+    color: white;
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.folderBody {
+    background-color: white;
+    display: grid;
+}

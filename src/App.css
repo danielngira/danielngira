@@ -19,7 +19,8 @@ body {
 }
 
 .container {
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
 }
 
 .folderContainer {
@@ -33,6 +34,10 @@ body {
   margin: 5px;
   align-content: center;
   text-align: middle;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: "VT323", monospace;
 }
 
 .folderContainer:hover {
