@@ -8,40 +8,38 @@ type ModalProps = {
   closeWindow: () => void;
 };
 
-
-function Modal({ currentlyOpenWindow, closeWindow}: ModalProps) {
+function Modal({ currentlyOpenWindow, closeWindow }: ModalProps) {
   return (
     <>
       <div className="modalContainer">
         <div className="header">
-            {/*Title*/}
+          {/*Title*/}
+          <div>
+            <p>{currentlyOpenWindow}</p>
+          </div>
+
+          <div className="buttons">
+            {/*Minimize*/}
             <div>
-                <p>{currentlyOpenWindow}</p>
+              <button className="button">
+                <img src={minimize} alt="Minimize Button" />
+              </button>
             </div>
 
-            <div className="buttons">
-                {/*Minimize*/}
-                <div>
-                    <button className="button">
-                        <img src={minimize} alt="Minimize Button"/>
-                    </button>
-                </div>
-
-                {/*Maximimze*/}
-                <div>
-                    <button className="button">
-                        <img src={maximize} alt="Maximize Button"/>
-                    </button>
-                </div>
-
-                {/*Close*/}
-                <div>
-                    <button onClick={closeWindow} className="button">
-                        <img src={close} alt="Close Button"/>
-                    </button>
-                </div>
+            {/*Maximimze*/}
+            <div>
+              <button className="button">
+                <img src={maximize} alt="Maximize Button" />
+              </button>
             </div>
 
+            {/*Close*/}
+            <div>
+              <button onClick={closeWindow} className="button">
+                <img src={close} alt="Close Button" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="folderBody">

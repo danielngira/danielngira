@@ -37,7 +37,7 @@ function App() {
     /* Update time every minute*/
   }
   useEffect(() => {
-    const updateTime = () => {  
+    const updateTime = () => {
       setTime(getLocalTime());
     };
 
@@ -99,9 +99,11 @@ function App() {
           </button>
 
           {currentlyOpenWindow !== Folders.Closed && (
-            <Modal currentlyOpenWindow={currentlyOpenWindow} closeWindow={closeWindow}/>
+            <Modal
+              currentlyOpenWindow={currentlyOpenWindow}
+              closeWindow={closeWindow}
+            />
           )}
-
         </div>
 
         {/*Taskbar*/}

@@ -7,24 +7,27 @@ html {
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 .modalContainer {
   --modal-height: 70vh;
   --header-height: 10%;
 
-  background: linear-gradient(180deg,
+  background: linear-gradient(
+    180deg,
     #5d9bff 0%,
     #2f6fea 3%,
     #245dda 7%,
     #123a9a var(--header-height),
     #245dda 12%,
-    #245dda 100%);
+    #245dda 100%
+  );
 
   box-shadow:
     inset 1px 1px 0 rgba(255, 255, 255, 0.45),
     inset -1px -1px 0 rgba(0, 0, 80, 0.45),
     0 4px 12px rgba(0, 0, 0, 0.35);
+
   width: 70vw;
   height: var(--modal-height);
   border-radius: 10px;
@@ -32,7 +35,7 @@ p {
   font-family: "VT323", monospace;
   color: white;
   font-size: 1.5rem;
-  
+
   display: flex;
   flex-direction: column;
 
@@ -71,14 +74,14 @@ p {
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .button {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
