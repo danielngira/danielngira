@@ -1,9 +1,9 @@
-function ContactMe () {
-    return (
-        <>
-        <p> Contact me Page</p>
-        </>
-    );
+function ContactMe() {
+  return (
+    <>
+      <p> Contact me Page</p>
+    </>
+  );
 }
 
 export default ContactMe;

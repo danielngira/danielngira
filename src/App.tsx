@@ -7,7 +7,7 @@ import internet from "./assets/images/internet.png";
 import { useState, useEffect } from "react";
 import Modal from "./Components/Modal";
 import { Folders } from "./utils/constants";
-import MyComputer from "./Components/MyComputer"
+import MyComputer from "./Components/MyComputer";
 import ContactMe from "./Components/ContactMe";
 import Resume from "./Components/Resume";
 import Projects from "./Components/Projects";
@@ -38,20 +38,23 @@ function App() {
     setCurrentlyOpenWindow(Folders.Closed);
   };
 
+  {
+    /*Return components that will be passed to Modal*/
+  }
   const modalContent = () => {
     switch (currentlyOpenWindow) {
-        case Folders.ContactMe:
-            return <ContactMe />;
-        case Folders.Media:
-            return <Media />;
-        case Folders.MyComputer:
-            return <MyComputer />;
-        case Folders.Projects:
-            return <Projects />;
-        case Folders.Resume:
-            return <Resume />;
-        default:
-            return null;
+      case Folders.ContactMe:
+        return <ContactMe />;
+      case Folders.Media:
+        return <Media />;
+      case Folders.MyComputer:
+        return <MyComputer />;
+      case Folders.Projects:
+        return <Projects />;
+      case Folders.Resume:
+        return <Resume />;
+      default:
+        return null;
     }
   };
 
@@ -124,8 +127,8 @@ function App() {
             <Modal
               currentlyOpenWindow={currentlyOpenWindow}
               closeWindow={closeWindow}
-            > 
-                {modalContent()}
+            >
+              {modalContent()}
             </Modal>
           )}
         </div>

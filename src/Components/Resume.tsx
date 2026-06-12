@@ -1,9 +1,9 @@
-function Resume () {
-    return (
-        <>
-        <p> Resume Page</p>
-        </>
-    );
+function Resume() {
+  return (
+    <>
+      <p> Resume Page</p>
+    </>
+  );
 }
 
 export default Resume;

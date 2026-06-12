@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com");
 
 html {
-  cursor: url("./assets/images/pointer.png"), auto;
+  cursor: url("../assets/images/pointer.png"), auto;
 }
 
 p {
@@ -71,6 +71,7 @@ p {
   display: grid;
   padding-left: 1%;
   padding-right: 1%;
+  overflow: scroll;
 }
 
 .buttons {
