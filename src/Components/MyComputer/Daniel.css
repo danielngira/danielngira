@@ -64,8 +64,7 @@ p {
   margin-right: 0.5%;
   margin-bottom: 0.5%;
   display: grid;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding: 5%;
   font-family: "Geist Mono", monospace;
   overflow: scroll;
 }

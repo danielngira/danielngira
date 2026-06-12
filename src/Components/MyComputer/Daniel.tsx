@@ -34,7 +34,10 @@ function Daniel({ closeWindow }: DanielProps) {
 
         <div className="danielBody">
           {DANIEL_BIO.map((paragraph) => (
-            <p>{paragraph}</p>
+            <>
+              <p>{paragraph}</p>
+              <br></br>
+            </>
           ))}
         </div>
       </div>
