@@ -71,7 +71,6 @@ p {
   display: grid;
   padding-left: 1%;
   padding-right: 1%;
-  overflow: scroll;
 }
 
 .buttons {
