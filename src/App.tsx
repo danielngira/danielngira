@@ -5,13 +5,13 @@ import harddrive from "./assets/images/hard-drive.png";
 import storage from "./assets/images/storage.png";
 import internet from "./assets/images/internet.png";
 import { useState, useEffect } from "react";
-import Modal from "./Components/Modal";
+import Modal from "./Components/Modal/Modal";
 import { Folders } from "./utils/constants";
-import MyComputer from "./Components/MyComputer";
-import ContactMe from "./Components/ContactMe";
-import Resume from "./Components/Resume";
-import Projects from "./Components/Projects";
-import Media from "./Components/Media";
+import MyComputer from "./Components/MyComputer/MyComputer";
+import ContactMe from "./Components/ContactMe/ContactMe";
+import Resume from "./Components/Resume/Resume";
+import Projects from "./Components/Projects/Projects";
+import Media from "./Components/Media/Media";
 
 type Folder = (typeof Folders)[keyof typeof Folders];
 

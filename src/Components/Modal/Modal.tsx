@@ -1,7 +1,7 @@
 import "./Modal.css";
-import close from "../assets/images/exit.png";
-import minimize from "../assets/images/minimize.png";
-import maximize from "../assets/images/maximize.png";
+import close from "../../assets/images/exit.png";
+import minimize from "../../assets/images/minimize.png";
+import maximize from "../../assets/images/maximize.png";
 import type { ReactNode } from "react";
 
 type ModalProps = {
