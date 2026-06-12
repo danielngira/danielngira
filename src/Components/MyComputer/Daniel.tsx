@@ -2,6 +2,7 @@ import "./Daniel.css";
 import close from "../../assets/images/exit.png";
 import minimize from "../../assets/images/minimize.png";
 import maximize from "../../assets/images/maximize.png";
+import { DANIEL_BIO } from "../../utils/constants";
 
 type DanielProps = {
   closeWindow: () => void;
@@ -32,7 +33,9 @@ function Daniel({ closeWindow }: DanielProps) {
         </div>
 
         <div className="danielBody">
-          <p> Hello and welcome to my space on the internet</p>
+          {DANIEL_BIO.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
         </div>
       </div>
     </>
