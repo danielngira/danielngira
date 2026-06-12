@@ -2,13 +2,16 @@ import "./Modal.css";
 import close from "../assets/images/exit.png";
 import minimize from "../assets/images/minimize.png";
 import maximize from "../assets/images/maximize.png";
+import type { ReactNode } from 'react';
 
 type ModalProps = {
   currentlyOpenWindow: string;
   closeWindow: () => void;
+  children: ReactNode;
 };
 
-function Modal({ currentlyOpenWindow, closeWindow }: ModalProps) {
+function Modal({ currentlyOpenWindow, closeWindow, children }: ModalProps) {
+
   return (
     <>
       <div className="modalContainer">
@@ -43,7 +46,7 @@ function Modal({ currentlyOpenWindow, closeWindow }: ModalProps) {
         </div>
 
         <div className="folderBody">
-          <p>This is the {currentlyOpenWindow} window.</p>
+          {children}
         </div>
       </div>
     </>
