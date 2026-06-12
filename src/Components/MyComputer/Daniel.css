@@ -1,78 +1,80 @@
-.danielContainer{
-    display: flex;
-    flex-direction: column;
-    font: 1.5rem;
+.danielContainer {
+  display: flex;
+  flex-direction: column;
+  font: 1.5rem;
 
-    background: linear-gradient(180deg,
-            #5d9bff 0%,
-            #2f6fea 3%,
-            #245dda 7%,
-            #123a9a var(--header-height),
-            #245dda 12%,
-            #245dda 100%);
+  background: linear-gradient(
+    180deg,
+    #5d9bff 0%,
+    #2f6fea 3%,
+    #245dda 7%,
+    #123a9a var(--header-height),
+    #245dda 12%,
+    #245dda 100%
+  );
 
-    box-shadow:
-        inset 1px 1px 0 rgba(255, 255, 255, 0.45),
-        inset -1px -1px 0 rgba(0, 0, 80, 0.45),
-        0 4px 12px rgba(0, 0, 0, 0.35);
-    
-    --daniel-container-height: 70vh;
-    height: var(--daniel-container-height);
-    width: 70vw;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.45),
+    inset -1px -1px 0 rgba(0, 0, 80, 0.45),
+    0 4px 12px rgba(0, 0, 0, 0.35);
 
-    color: white;
-    box-sizing: border-box;
-    border-radius: 10px;
+  --daniel-container-height: 70vh;
+  height: var(--daniel-container-height);
+  width: 70vw;
 
-    position: fixed;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+  color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  position: fixed;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .danielHeader {
-    display: flex;
-    border-radius: 10px;
-    flex-direction: row;
-    font-size: 1.5rem;
-    height: calc(0.1 * var(--modal-height));
-    align-items: center;
-    margin: 0;
-    border: 0;
-    justify-content: space-between;
-    padding-left: 1%;
-    padding-right: 1%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: row;
+  font-size: 1.5rem;
+  height: calc(0.1 * var(--modal-height));
+  align-items: center;
+  margin: 0;
+  border: 0;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .danielBody {
-    flex: 1;
-    background-color: white;
-    color: black;
-    font-size: 1.25rem;
-    border-radius: 10px;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    margin-bottom: 0.5%;
-    display: grid;
-    padding-left: 1%;
-    padding-right: 1%;
-    font-family: monospace;
+  flex: 1;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+  display: grid;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: monospace;
 }
 
 .danielButtons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .danielButton {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
 
 .danielButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

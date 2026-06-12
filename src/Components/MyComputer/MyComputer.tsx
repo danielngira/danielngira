@@ -4,15 +4,15 @@ import { useState } from "react";
 import Daniel from "./Daniel";
 
 function MyComputer() {
-    const [isWindowOpen, setIsWindowOpen] = useState(false);
+  const [isWindowOpen, setIsWindowOpen] = useState(false);
 
-    const closeWindow = () => {
-        setIsWindowOpen(false);
-    };
+  const closeWindow = () => {
+    setIsWindowOpen(false);
+  };
 
-    const openWindow = () => {
-        setIsWindowOpen(true);
-    };
+  const openWindow = () => {
+    setIsWindowOpen(true);
+  };
 
   return (
     <>
@@ -21,7 +21,7 @@ function MyComputer() {
           <img src={file} alt="Image of a File Icon" />
         </button>
         <p>DANIEL.md</p>
-        {isWindowOpen && (<Daniel closeWindow={closeWindow}/>)}
+        {isWindowOpen && <Daniel closeWindow={closeWindow} />}
       </div>
     </>
   );
