@@ -1,7 +1,7 @@
 function Media() {
   return (
     <>
-      <p> Media Page</p>
+      <p> Update coming soon...</p>
     </>
   );
 }

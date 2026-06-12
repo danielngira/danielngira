@@ -1,7 +1,7 @@
 function ContactMe() {
   return (
     <>
-      <p> Contact me Page</p>
+      <p> Update coming soon...</p>
     </>
   );
 }

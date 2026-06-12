@@ -1,7 +1,7 @@
 function Resume() {
   return (
     <>
-      <p> Resume Page</p>
+      <p> Update coming soon...</p>
     </>
   );
 }
