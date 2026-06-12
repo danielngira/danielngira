@@ -7,10 +7,17 @@ html {
 }
 
 .modalContainer {
-  background-color: #245dda;
+  --modal-height: 70vh;
+  background: linear-gradient(180deg,
+    rgba(18, 58, 154, 1) 0%,
+    rgba(29, 79, 194, 1) 18%,
+    rgba(36, 93, 218, 1) 45%,
+    rgba(47, 111, 232, 1) 72%,
+    rgba(75, 134, 245, 1) 100%
+    );
   width: 70vw;
-  height: 70vh;
-  border-radius: 5px;
+  height: var(--modal-height);
+  border-radius: 10px;
   box-sizing: border-box;
   font-family: "VT323", monospace;
   color: white;
@@ -29,20 +36,38 @@ html {
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;
+  height: calc(0.1 * var(--modal-height));
+  align-items: center;
+  margin: 0;
+  border: 0;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .folderBody {
+  flex: 1;
   background-color: white;
   color: black;
   font-size: 1.5rem;
-  border-radius: 5px;
-  top: 5%;
-  height: 90%;
-  width: 99%;
-  margin-bottom: 0px;
+  border-radius: 10px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
   display: grid;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    background: transparent;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
 }

@@ -19,25 +19,27 @@ function Modal({ currentlyOpenWindow, closeWindow}: ModalProps) {
                 <p>{currentlyOpenWindow}</p>
             </div>
 
-            {/*Minimize*/}
-            <div>
-                <button>
-                    <img src={minimize} alt="Minimize Button"/>
-                </button>
-            </div>
+            <div className="buttons">
+                {/*Minimize*/}
+                <div>
+                    <button className="button">
+                        <img src={minimize} alt="Minimize Button"/>
+                    </button>
+                </div>
 
-            {/*Maximimze*/}
-            <div>
-                <button>
-                    <img src={maximize} alt="Maximize Button"/>
-                </button>
-            </div>
+                {/*Maximimze*/}
+                <div>
+                    <button className="button">
+                        <img src={maximize} alt="Maximize Button"/>
+                    </button>
+                </div>
 
-            {/*Close*/}
-            <div>
-                <button onClick={() => closeWindow()}>
-                    <img src={close} alt="Close Button"/>
-                </button>
+                {/*Close*/}
+                <div>
+                    <button onClick={closeWindow} className="button">
+                        <img src={close} alt="Close Button"/>
+                    </button>
+                </div>
             </div>
 
         </div>
