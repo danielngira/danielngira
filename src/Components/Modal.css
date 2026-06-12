@@ -6,27 +6,43 @@ html {
   cursor: url("./assets/images/pointer.png"), auto;
 }
 
-modalContainer {
+.modalContainer {
   background-color: #245dda;
-  height: 50vh;
   width: 70vw;
+  height: 70vh;
   border-radius: 5px;
-  background-size: cover;
-  display: flex;
   box-sizing: border-box;
   font-family: "VT323", monospace;
-  font-style: normal;
   color: white;
+  font-size: 1.5rem;
+  
   display: flex;
   flex-direction: column;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
   display: flex;
   flex-direction: row;
+  font-size: 1.5rem;
 }
 
 .folderBody {
   background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  top: 5%;
+  height: 90%;
+  width: 99%;
+  margin-bottom: 0px;
   display: grid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

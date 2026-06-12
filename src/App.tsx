@@ -6,15 +6,7 @@ import storage from "./assets/images/storage.png";
 import internet from "./assets/images/internet.png";
 import { useState, useEffect } from "react";
 import Modal from "./Components/Modal";
-
-const Folders = {
-  Closed: "Closed",
-  Projects: "Projects",
-  MyComputer: "My Computer",
-  Media: "Media",
-  Resume: "Resume",
-  ContactMe: "Contact Me",
-} as const;
+import { Folders } from "./utils/constants";
 
 type Folder = (typeof Folders)[keyof typeof Folders];
 
@@ -37,17 +29,15 @@ function App() {
     setCurrentlyOpenWindow(folder);
   };
 
-  /*
   const closeWindow = () => {
     setCurrentlyOpenWindow(Folders.Closed);
-  }
-    */
+  };
 
   {
     /* Update time every minute*/
   }
   useEffect(() => {
-    const updateTime = () => {
+    const updateTime = () => {  
       setTime(getLocalTime());
     };
 
@@ -109,8 +99,9 @@ function App() {
           </button>
 
           {currentlyOpenWindow !== Folders.Closed && (
-            <Modal currentlyOpenWindow={currentlyOpenWindow} />
+            <Modal currentlyOpenWindow={currentlyOpenWindow} closeWindow={closeWindow}/>
           )}
+
         </div>
 
         {/*Taskbar*/}
