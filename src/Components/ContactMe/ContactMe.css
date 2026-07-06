@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  text-align: center;
+
+  padding-top: 2rem;
+  padding-left: 1.25rem;
+
+  width: fit-content;
+}
+
+.contactIcon {
+  width: 60px;
+  height: 60px;
+}
