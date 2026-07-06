@@ -1,8 +1,11 @@
+import "./Resume.css";
+import { DANIEL_RESUME } from "../../utils/constants";
+
 function Resume() {
   return (
-    <>
-      <p> Update coming soon...</p>
-    </>
+    <div className="resumeBody">
+      <pre className="resumeText">{DANIEL_RESUME}</pre>
+    </div>
   );
 }
 
