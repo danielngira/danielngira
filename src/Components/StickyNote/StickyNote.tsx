@@ -9,7 +9,7 @@ function StickyNote() {
       <h2 className="stickyNoteTitle">To Do</h2>
 
       <ul className="stickyNoteList">
-        {SITE_TODOS.map((todo) => (
+        {SITE_TODOS.map((todo: string) => (
           <li key={todo} className="stickyNoteItem">
             <span className="stickyNoteCheckbox">□</span>
             <span>{todo}</span>
