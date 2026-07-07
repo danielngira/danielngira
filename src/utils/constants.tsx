@@ -133,3 +133,10 @@ https://github.com/spencerdearman/procrastination-simulator
   management, integrating a custom game-logic system to simulate time progression
   and task execution.
 `;
+
+export const SITE_TODOS: string[] = [
+  "Add my projects",
+  "Add my favorite books, movies and albums to media folder",
+  "Add functionality to minimize and maximize pages",
+  "Add functionality to move pages around screen",
+];

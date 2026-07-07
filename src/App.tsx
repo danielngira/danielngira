@@ -12,6 +12,7 @@ import ContactMe from "./Components/ContactMe/ContactMe";
 import Resume from "./Components/Resume/Resume";
 import Projects from "./Components/Projects/Projects";
 import Media from "./Components/Media/Media";
+import StickyNote from "./Components/StickyNote/StickyNote";
 
 type Folder = (typeof Folders)[keyof typeof Folders];
 
@@ -122,6 +123,8 @@ function App() {
             <img src={internet} alt="Internet Explorer Icon" className="icon" />
             <p className="folderName">Contact Me</p>
           </button>
+
+          <StickyNote />
 
           {currentlyOpenWindow !== Folders.Closed && (
             <Modal
