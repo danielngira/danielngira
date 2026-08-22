@@ -8,6 +8,7 @@ I enjoy working across the stack: turning ambiguous product ideas into shipped f
 
 - Full-stack and product engineering
 - Cloud infrastructure, CI/CD, and developer tooling
+- Distributed Systems
 - AI-assisted applications and workflow automation
 - Systems projects that make core computer science concepts concrete
 
