@@ -25,13 +25,13 @@ Designed and provisioned modular AWS infrastructure with CDK in TypeScript. Buil
 * Building a full-stack personal finance application with React, TypeScript, Node.js, Express, PostgreSQL, and Drizzle ORM, with APIs for managing financial accounts and transactions.
 * Implemented request validation, centralized error handling, pagination, database migrations and seeding, automated API/service tests, and Docker-based local development with environment-specific configuration.
 
-**LEGv8 / ARM64 Simulator**  
-* Built a processor simulator modeling a five-stage instruction pipeline with hazard detection, data forwarding, branch handling, and data-cache behavior.
-* Added performance counters and execution tracing to analyze pipeline behavior, stalls, cache activity, and instruction execution.
-
 **Chigame**
 * Built Django backend features for a collaborative board-game platform using relational models, class-based views, forms, URL routing, migrations, and SQL-backed CRUD workflows.
 * Developed authenticated review workflows with foreign-key relationships, validation, visibility controls, search, filtering, pagination, and BoardGameGeek API integration.
+
+**LEGv8 / ARM64 Simulator**  
+* Built a processor simulator modeling a five-stage instruction pipeline with hazard detection, data forwarding, branch handling, and data-cache behavior.
+* Added performance counters and execution tracing to analyze pipeline behavior, stalls, cache activity, and instruction execution.
 
 **Accessibility Reporting Automation**
 * Automated monthly accessibility reporting using Python, pandas, the Siteimprove API, and the Google Sheets API to retrieve,
@@ -64,7 +64,7 @@ errors.
 * Developed allocation and memory-management logic for tracking and reusing blocks of dynamically allocated memory.
 
 **Reversi**
-*Implemented the rules and game-state logic for Reversi in C, including move validation, piece flipping, turn progression, and end-game detection.
+* Implemented the rules and game-state logic for Reversi in C, including move validation, piece flipping, turn progression, and end-game detection.
 * Built a terminal-based user interface for displaying the board and supporting interactive gameplay.
 
 ## Tech stack
