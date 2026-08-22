@@ -21,15 +21,17 @@ Designed and provisioned modular AWS infrastructure with CDK in TypeScript. Buil
 
 ## Selected projects
 
+**Ledger**
+* Building a full-stack personal finance application with React, TypeScript, Node.js, Express, PostgreSQL, and Drizzle ORM, with APIs for managing financial accounts and transactions.
+* Implemented request validation, centralized error handling, pagination, database migrations and seeding, automated API/service tests, and Docker-based local development with environment-specific configuration.
+
 **LEGv8 / ARM64 Simulator**  
-* A processor simulation project modeling a 5-stage pipeline with hazard detection, forwarding, branch handling, data-cache behavior, performance counters, and trace logging.
+* Built a processor simulator modeling a five-stage instruction pipeline with hazard detection, data forwarding, branch handling, and data-cache behavior.
+* Added performance counters and execution tracing to analyze pipeline behavior, stalls, cache activity, and instruction execution.
 
 **Chigame**
-* Built Django backend features for a collaborative game platform, including relational models, class-based views, forms, URL routing,
-migrations,andSQL-backedCRUD workflows.
-
-* Designed authenticated review workflows withforeign-key relationships, validation, visibility controls, search, filtering, pagination,
-and external BoardGameGeek API integration.
+* Built Django backend features for a collaborative board-game platform using relational models, class-based views, forms, URL routing, migrations, and SQL-backed CRUD workflows.
+* Developed authenticated review workflows with foreign-key relationships, validation, visibility controls, search, filtering, pagination, and BoardGameGeek API integration.
 
 **Accessibility Reporting Automation**
 * Automated monthly accessibility reporting using Python, pandas, the Siteimprove API, and the Google Sheets API to retrieve,
@@ -38,27 +40,32 @@ clean, and publish standardized compliance reports.
 errors.
 
 **College Life Simulator**  
-* A React-based simulation game that models a student's daily schedule through dynamic state management, time progression, and custom game logic.
+* Built a React simulation game modeling a student's daily life through dynamic state management, time progression, scheduling, and custom gameplay logic.
+* Designed interactive systems that update the game state in response to player decisions and changing in-game conditions.
 
 **Portfolio Website**  
-* This repository also contains the code for my personal portfolio site, built with React, TypeScript, and Vite.
+* Built a personal portfolio website with React, TypeScript, and Vite to showcase software engineering projects, technical experience, and contact information.
+* Developed reusable UI components and responsive layouts while experimenting with custom visual design and frontend interaction patterns.
 
 **YouTube focus extension**
-* Designed and developed a Manifest V3 browser extension that gives users direct control over distracting elements in the YouTube interface.
-* The extension allows users to hide or restore the home feed, recommended videos, Shorts, comments, live chat, advertisements, search controls, video details, thumbnails, and other interface elements.
+* Built a Manifest V3 browser extension that gives users granular control over distracting elements in the YouTube interface.
+* Implemented configurable controls for hiding or restoring the home feed, recommended videos, Shorts, comments, live chat, advertisements, search controls, video details, thumbnails, and other interface elements.
 
 **Diving VR simulator**
-* Made a VR user interface using Unity and Meta Quest
-* Implemented hand tracking and made accessible UI elements
+* Developed an interactive VR diving experience in Unity for Meta Quest, with a focus on intuitive and accessible user interaction.
+* Implemented hand tracking and VR-native interface elements that allow users to interact with application controls without traditional controllers.
 
 **Terminal**
-* Wrote a terminal with commands like ls, cd, and redirection in C
+* Built a Unix-style command-line shell in C supporting core commands and filesystem navigation.
+* Implemented command parsing, built-in commands such as cd, and input/output redirection to better understand processes, file descriptors, and operating-system interfaces.
   
 **Malloc**
-* Wrote malloc in C to handle memory
+* Implemented a custom dynamic memory allocator in C to explore how programs manage heap memory beneath standard library abstractions.
+* Developed allocation and memory-management logic for tracking and reusing blocks of dynamically allocated memory.
 
 **Reversi**
-* Wrote logic for and designed a TUI for a game of Reversi in C
+*Implemented the rules and game-state logic for Reversi in C, including move validation, piece flipping, turn progression, and end-game detection.
+* Built a terminal-based user interface for displaying the board and supporting interactive gameplay.
 
 ## Tech stack
 
