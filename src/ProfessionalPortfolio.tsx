@@ -26,6 +26,17 @@ const projects: Project[] = [
   },
   {
     number: "02",
+    name: "HookRelay",
+    type: "Backend reliability · In progress",
+    summary: "Make webhook delivery behavior visible and repeatable.",
+    details: "A local delivery workbench that queues event batches with Redis and BullMQ, signs webhook requests, and records retries and outcomes. Compare receiver behavior and worker concurrency using saved runs.",
+    stack: ["TypeScript", "PostgreSQL", "Redis", "BullMQ", "Docker"],
+    href: "https://github.com/danielngira/hookrelay",
+    label: "View on GitHub",
+    tone: "hookrelay",
+  },
+  {
+    number: "03",
     name: "Ledger",
     type: "Full-stack application · In progress",
     summary: "A finance app designed around a reliable data layer.",
@@ -36,7 +47,7 @@ const projects: Project[] = [
     tone: "ledger",
   },
   {
-    number: "03",
+    number: "04",
     name: "LEGv8 / ARM64 simulator",
     type: "Computer architecture · Completed",
     summary: "Make processor behavior visible, one cycle at a time.",
@@ -47,7 +58,7 @@ const projects: Project[] = [
     tone: "systems",
   },
   {
-    number: "04",
+    number: "05",
     name: "Accessibility reporting",
     type: "Workflow automation · Completed",
     summary: "Turn a two-hour monthly report into a five-minute workflow.",
@@ -58,7 +69,7 @@ const projects: Project[] = [
     tone: "automation",
   },
   {
-    number: "05",
+    number: "06",
     name: "College Life Simulator",
     type: "Interactive application · Completed",
     summary: "A small simulation about decisions, schedules, and time.",
@@ -69,7 +80,7 @@ const projects: Project[] = [
     tone: "play",
   },
   {
-    number: "06",
+    number: "07",
     name: "Word search solver",
     type: "Algorithms · Completed",
     summary: "A focused exercise in search and constraint handling.",
@@ -188,6 +199,7 @@ function ProjectCard({ project }: { project: Project }) {
 
 function ProjectVisual({ tone }: { tone: string }) {
   if (tone === "trace") return <div className="visual-trace"><i /><i /><i /><i /><i /><span>p95</span></div>;
+  if (tone === "hookrelay") return <div className="visual-hookrelay"><span>EVENT</span><i>→</i><b>QUEUE</b><i>→</i><span>DELIVERY</span><small>retry · backoff</small></div>;
   if (tone === "ledger") return <div className="visual-ledger"><div className="ledger-card"><span>NET WORTH</span><b>$12,480</b><i>↗ 8.2%</i></div><div className="ledger-lines"><i /><i /><i /></div></div>;
   if (tone === "systems") return <div className="visual-pipeline"><span>IF</span><i /> <span>ID</span><i /> <span>EX</span><i /> <span>MEM</span><i /> <span>WB</span></div>;
   if (tone === "automation") return <div className="visual-automation"><span>API</span><i>→</i><span>DATA</span><i>→</i><span>SHEETS</span></div>;

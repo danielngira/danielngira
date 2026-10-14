@@ -26,6 +26,14 @@ Designed and provisioned modular AWS infrastructure with CDK in TypeScript. Buil
 * Building a full-stack personal finance application with React, TypeScript, Node.js, Express, PostgreSQL, and Drizzle ORM, with APIs for managing financial accounts and transactions.
 * Implemented request validation, centralized error handling, pagination, database migrations and seeding, automated API/service tests, and Docker-based local development with environment-specific configuration.
 
+**HookRelay**
+* Built a local webhook-delivery workbench with TypeScript, PostgreSQL, Redis, and BullMQ, using a transactional outbox to coordinate queued work.
+* Added signed delivery attempts, bounded retries with backoff, deterministic receiver scenarios, replay, and run comparisons to explore reliability under different conditions.
+
+**TraceLens**
+* Built a local API performance workbench that runs repeatable k6 load against a seeded PostgreSQL-backed service and saves results for comparison.
+* Measures p50/p95/p99 latency, throughput, errors, request activity, connection-pool usage, and query timing to make performance changes observable.
+
 **Chigame**
 * Built Django backend features for a collaborative board-game platform using relational models, class-based views, forms, URL routing, migrations, and SQL-backed CRUD workflows.
 * Developed authenticated review workflows with foreign-key relationships, validation, visibility controls, search, filtering, pagination, and BoardGameGeek API integration.
