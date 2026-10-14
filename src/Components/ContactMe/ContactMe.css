@@ -1,8 +1,8 @@
-a {
+body.personal-mode a {
   text-decoration: none;
 }
 
-a:hover {
+body.personal-mode a:hover {
   text-decoration: underline;
 }
 

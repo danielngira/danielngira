@@ -1,0 +1,199 @@
+.experience-chooser {
+  --chooser-ink: #f2f5f6;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 28px clamp(22px, 6vw, 92px) 22px;
+  color: var(--chooser-ink);
+  background:
+    radial-gradient(ellipse at 50% 39%, rgba(60, 89, 139, 0.21), transparent 39%),
+    radial-gradient(ellipse at 88% 82%, rgba(85, 66, 124, 0.2), transparent 32%),
+    #0b0f15;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.personal-exit {
+  position: fixed;
+  z-index: 10;
+  top: 14px;
+  right: 16px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 7px;
+  color: #172532;
+  background: rgba(255, 255, 255, .84);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .17);
+  font: 600 11px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.personal-exit:hover { background: #fff; }
+
+.experience-chooser::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  opacity: 0.2;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.chooser-orbit {
+  position: absolute;
+  z-index: -1;
+  width: 38vw;
+  aspect-ratio: 1;
+  border: 1px solid rgba(179, 204, 239, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.chooser-orbit-one { top: 10%; left: 48%; }
+.chooser-orbit-two { top: 22%; left: 53%; width: 28vw; }
+
+.chooser-header,
+.chooser-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chooser-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f1f4f8;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.wordmark-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+.chooser-status,
+.chooser-footer {
+  color: #9299a7;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.chooser-status { display: flex; align-items: center; gap: 8px; }
+.chooser-status i { width: 7px; height: 7px; border-radius: 50%; background: #a6e5c3; box-shadow: 0 0 12px #a6e5c377; }
+
+.chooser-main {
+  width: min(100%, 900px);
+  margin: auto;
+  padding: 72px 0 84px;
+  text-align: center;
+}
+
+.chooser-kicker,
+.professional-eyebrow {
+  margin: 0 0 18px;
+  color: #97b8ff;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.chooser-main h1 {
+  margin: 0;
+  color: #f4f5f7;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 540;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.chooser-intro {
+  max-width: 480px;
+  margin: 20px auto 0;
+  color: #a4aab5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 46px;
+  text-align: left;
+}
+
+.experience-card {
+  position: relative;
+  display: flex;
+  min-height: 258px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 24px 25px 22px;
+  border: 1px solid rgba(227, 234, 249, 0.16);
+  border-radius: 19px;
+  color: #eef1f5;
+  background: linear-gradient(142deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035));
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 280ms ease, background 280ms ease, box-shadow 280ms ease;
+}
+
+.experience-card:hover,
+.experience-card:focus-visible {
+  z-index: 1;
+  transform: translateY(-8px) scale(1.025);
+  border-color: rgba(204, 222, 255, 0.44);
+  background: linear-gradient(142deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.055));
+  box-shadow: 0 32px 76px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.17);
+  outline: none;
+}
+
+.card-index { color: #8d96a6; font-size: 9px; font-weight: 650; letter-spacing: 0.15em; }
+.choice-icon { display: grid; width: 42px; height: 42px; place-items: center; margin: 24px 0 14px; border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 13px; background: rgba(255, 255, 255, 0.075); font-size: 20px; }
+.professional-icon { color: #b5caff; }
+.personal-icon { color: #d5c4ff; }
+.choice-title { font-size: 21px; font-weight: 570; letter-spacing: -0.045em; }
+.choice-description { max-width: 310px; margin-top: 7px; color: #a9afba; font-size: 12px; line-height: 1.6; }
+.choice-action { display: flex; width: 100%; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 20px; color: #dfe5ee; font-size: 11px; font-weight: 560; }
+.choice-action span { color: #a5c1ff; font-size: 17px; transition: transform 180ms ease; }
+.experience-card:hover .choice-action span { transform: translateX(4px); }
+.card-glint { position: absolute; top: -60%; right: -12%; width: 45%; height: 120%; transform: rotate(28deg); background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.045), transparent); pointer-events: none; }
+
+.chooser-footer { font-size: 9px; letter-spacing: 0.12em; }
+
+@media (max-width: 640px) {
+  .experience-chooser { min-height: 100svh; padding: 20px 18px 18px; }
+  .chooser-status { font-size: 0; }
+  .chooser-status i { width: 8px; height: 8px; }
+  .chooser-main { padding: 72px 0; }
+  .chooser-main h1 { font-size: clamp(48px, 14vw, 70px); }
+  .chooser-intro { max-width: 350px; font-size: 13px; }
+  .experience-cards { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
+  .experience-card { min-height: 220px; padding: 20px; }
+  .choice-icon { margin: 17px 0 12px; }
+  .chooser-footer { gap: 12px; font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .choice-action span { transition: none; }
+}
