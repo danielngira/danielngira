@@ -1,8 +1,5 @@
+import { useEffect, type ReactNode } from "react";
 import "./Modal.css";
-import close from "../../assets/images/exit.png";
-import minimize from "../../assets/images/minimize.png";
-import maximize from "../../assets/images/maximize.png";
-import type { ReactNode } from "react";
 
 type ModalProps = {
   currentlyOpenWindow: string;
@@ -11,42 +8,29 @@ type ModalProps = {
 };
 
 function Modal({ currentlyOpenWindow, closeWindow, children }: ModalProps) {
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeWindow();
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [closeWindow]);
+
   return (
-    <>
-      <div className="modalContainer">
-        <div className="header">
-          {/*Title*/}
-          <div>
-            <p>{currentlyOpenWindow}</p>
-          </div>
-
-          <div className="buttons">
-            {/*Minimize*/}
-            <div>
-              <button className="button">
-                <img src={minimize} alt="Minimize Button" />
-              </button>
-            </div>
-
-            {/*Maximimze*/}
-            <div>
-              <button className="button">
-                <img src={maximize} alt="Maximize Button" />
-              </button>
-            </div>
-
-            {/*Close*/}
-            <div>
-              <button onClick={closeWindow} className="button">
-                <img src={close} alt="Close Button" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="folderBody">{children}</div>
-      </div>
-    </>
+    <section
+      className="modalContainer"
+      role="dialog"
+      aria-modal="true"
+      aria-label={currentlyOpenWindow}
+    >
+      <header className="window-header">
+        <span className="window-title">{currentlyOpenWindow}</span>
+        <button className="window-close" onClick={closeWindow} aria-label="Close window">
+          ×
+        </button>
+      </header>
+      <div className="folderBody">{children}</div>
+    </section>
   );
 }
 

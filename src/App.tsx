@@ -1,25 +1,17 @@
 import "./App.css";
 import folder from "./assets/images/folder.png";
-import computer from "./assets/images/computer.png";
 import harddrive from "./assets/images/hard-drive.png";
-import storage from "./assets/images/storage.png";
-import internet from "./assets/images/internet.png";
-import { useState, useEffect } from "react";
+import file from "./assets/images/file.png";
+import { useEffect, useState } from "react";
 import Modal from "./Components/Modal/Modal";
-import { Folders } from "./utils/constants";
-import MyComputer from "./Components/MyComputer/MyComputer";
-import ContactMe from "./Components/ContactMe/ContactMe";
-import Resume from "./Components/Resume/Resume";
-import Projects from "./Components/Projects/Projects";
+import About from "./Components/About/About";
+import Interests from "./Components/Interests/Interests";
 import Media from "./Components/Media/Media";
-import StickyNote from "./Components/StickyNote/StickyNote";
 
-type Folder = (typeof Folders)[keyof typeof Folders];
+type Window = "About me" | "Media" | "Interests" | null;
 
 function getLocalTime() {
-  const timeNow = new Date();
-
-  return timeNow.toLocaleTimeString([], {
+  return new Date().toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
   });
@@ -27,131 +19,64 @@ function getLocalTime() {
 
 function App() {
   const [time, setTime] = useState("");
-  const [currentlyOpenWindow, setCurrentlyOpenWindow] = useState<Folder>(
-    Folders.Closed,
-  );
+  const [openWindow, setOpenWindow] = useState<Window>(null);
 
-  const openWindow = (folder: Folder) => {
-    setCurrentlyOpenWindow(folder);
-  };
-
-  const closeWindow = () => {
-    setCurrentlyOpenWindow(Folders.Closed);
-  };
-
-  {
-    /*Return components that will be passed to Modal*/
-  }
-  const modalContent = () => {
-    switch (currentlyOpenWindow) {
-      case Folders.ContactMe:
-        return <ContactMe />;
-      case Folders.Media:
-        return <Media />;
-      case Folders.MyComputer:
-        return <MyComputer />;
-      case Folders.Projects:
-        return <Projects />;
-      case Folders.Resume:
-        return <Resume />;
-      default:
-        return null;
-    }
-  };
-
-  {
-    /* Update time every minute*/
-  }
   useEffect(() => {
-    const updateTime = () => {
-      setTime(getLocalTime());
-    };
-
+    const updateTime = () => setTime(getLocalTime());
     updateTime();
-
-    const intervalId = setInterval(updateTime, 60000);
-    return () => clearInterval(intervalId);
+    const intervalId = window.setInterval(updateTime, 60000);
+    return () => window.clearInterval(intervalId);
   }, []);
 
+  const content = () => {
+    if (openWindow === "About me") return <About />;
+    if (openWindow === "Media") return <Media />;
+    if (openWindow === "Interests") return <Interests />;
+    return null;
+  };
+
   return (
-    <>
-      {/* Home page components */}
-      <div>
-        {/* Icons */}
-        <div className="container">
-          {/*Projects*/}
-          <button
-            onClick={() => openWindow(Folders.Projects)}
-            className="folderContainer"
-          >
-            <img src={folder} alt="Folder Icon" className="icon" />
-            <p className="folderName">Projects</p>
-          </button>
-
-          {/*Biography about me*/}
-          <button
-            onClick={() => openWindow(Folders.MyComputer)}
-            className="folderContainer"
-          >
-            <img src={computer} alt="Computer Icon" className="icon" />
-            <p className="folderName">My Computer</p>
-          </button>
-
-          {/*Media and Hobbies*/}
-          <button
-            onClick={() => openWindow(Folders.Media)}
-            className="folderContainer"
-          >
-            <img src={harddrive} alt="Hard Drive Icon" className="icon" />
-            <p className="folderName">Media</p>
-          </button>
-
-          {/*Resume*/}
-          <button
-            onClick={() => openWindow(Folders.Resume)}
-            className="folderContainer"
-          >
-            <img src={storage} alt="Storage Icon" className="icon" />
-            <p className="folderName">Resume</p>
-          </button>
-
-          {/*Contact me*/}
-          <button
-            onClick={() => openWindow(Folders.ContactMe)}
-            className="folderContainer"
-          >
-            <img src={internet} alt="Internet Explorer Icon" className="icon" />
-            <p className="folderName">Contact Me</p>
-          </button>
-
-          <StickyNote />
-
-          {currentlyOpenWindow !== Folders.Closed && (
-            <Modal
-              currentlyOpenWindow={currentlyOpenWindow}
-              closeWindow={closeWindow}
-            >
-              {modalContent()}
-            </Modal>
-          )}
-        </div>
-
-        {/*Taskbar*/}
-        <div>
-          <div className="taskbar">
-            {/*Start Button*/}
-            <div className="start">
-              <p className="taskbarText">Start</p>
-            </div>
-
-            {/*Clock*/}
-            <div className="clock">
-              <p className="taskbarText">{time}</p>
-            </div>
-          </div>
-        </div>
+    <main className="personal-desktop-app">
+      <div className="desktop-heading" aria-hidden="true">
+        <span>Daniel&apos;s desktop</span>
+        <span>PERSONAL FILES · EST. ALWAYS IN PROGRESS</span>
       </div>
-    </>
+
+      <nav className="desktop-icons" aria-label="Personal desktop folders">
+        <button className="desktop-icon" onClick={() => setOpenWindow("About me")}>
+          <img src={file} alt="" />
+          <span>About me</span>
+        </button>
+        <button className="desktop-icon" onClick={() => setOpenWindow("Media")}>
+          <img src={harddrive} alt="" />
+          <span>Media</span>
+        </button>
+        <button className="desktop-icon" onClick={() => setOpenWindow("Interests")}>
+          <img src={folder} alt="" />
+          <span>Interests</span>
+        </button>
+      </nav>
+
+      <aside className="desktop-note">
+        <span className="desktop-note-label">CURRENTLY INTO</span>
+        <strong>Golf, good stories<br />and good records.</strong>
+        <span className="desktop-note-mark" aria-hidden="true">✳</span>
+      </aside>
+
+      {openWindow && (
+        <Modal currentlyOpenWindow={openWindow} closeWindow={() => setOpenWindow(null)}>
+          {content()}
+        </Modal>
+      )}
+
+      <footer className="taskbar">
+        <button className="start" onClick={() => setOpenWindow("About me")}>
+          <span aria-hidden="true">✿</span> Start
+        </button>
+        <span className="taskbar-current">{openWindow ?? "Daniel’s desktop"}</span>
+        <time className="clock">{time}</time>
+      </footer>
+    </main>
   );
 }
 
