@@ -76,6 +76,7 @@
 .pf-project-visual { position: relative; display: flex; height: 182px; align-items: center; justify-content: center; overflow: hidden; background: #edf1f2; }
 .pf-project-visual::before { position: absolute; inset: 0; content: ""; opacity: .42; background-image: radial-gradient(#a8b4bb 0.6px, transparent 0.6px); background-size: 13px 13px; mask-image: linear-gradient(to bottom, black, transparent); }
 .tone-trace .pf-project-visual { background: linear-gradient(135deg, #e6eeec, #e6ebf3); }
+.tone-hookrelay .pf-project-visual { background: linear-gradient(135deg, #e9edf5, #e5eeeb); }
 .tone-ledger .pf-project-visual { background: linear-gradient(135deg, #eef0e6, #e8eee7); }
 .tone-systems .pf-project-visual { background: linear-gradient(135deg, #e8eaf2, #e6edf0); }
 .tone-automation .pf-project-visual { background: linear-gradient(135deg, #f0ece4, #e8edf1); }
@@ -91,6 +92,11 @@
 .visual-trace i { z-index: 1; width: 7px; border-radius: 5px 5px 0 0; background: linear-gradient(#526fe0, #90a1e9); }
 .visual-trace i:nth-child(1) { height: 21px; }.visual-trace i:nth-child(2) { height: 33px; }.visual-trace i:nth-child(3) { height: 29px; }.visual-trace i:nth-child(4) { height: 49px; }.visual-trace i:nth-child(5) { height: 60px; }
 .visual-trace span { position: absolute; top: -3px; right: -11px; color: #657593; font: 9px "DM Mono", monospace; }
+.visual-hookrelay { position: relative; z-index: 1; display: flex; align-items: center; gap: 9px; padding: 17px 19px 24px; border: 1px solid #ffffff; border-radius: 8px; background: #ffffffb8; box-shadow: 0 10px 25px #25304512; }
+.visual-hookrelay span,.visual-hookrelay b { padding: 9px 10px; border: 1px solid #d8e0e8; border-radius: 4px; color: #46566c; background: #f4f6f9; font: 7px "DM Mono", monospace; letter-spacing: .05em; }
+.visual-hookrelay b { color: #456e6b; background: #edf4f1; font-weight: 500; }
+.visual-hookrelay i { color: #81909d; font-size: 12px; font-style: normal; }
+.visual-hookrelay small { position: absolute; right: 21px; bottom: 7px; color: #7d8b91; font: 7px "DM Mono", monospace; }
 .visual-ledger { position: relative; z-index: 1; display: flex; width: 67%; align-items: center; gap: 16px; }
 .ledger-card { display: flex; width: 54%; flex-direction: column; padding: 14px; border: 1px solid rgba(255,255,255,.9); border-radius: 7px; background: rgba(255,255,255,.83); box-shadow: 0 9px 25px #293c2511; }
 .ledger-card span { color: #899386; font: 7px "DM Mono", monospace; letter-spacing: .08em; }.ledger-card b { margin: 8px 0 2px; color: #273329; font: 600 17px "Manrope", sans-serif; }.ledger-card i { color: #519567; font: normal 8px "DM Mono", monospace; }
