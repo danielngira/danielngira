@@ -89,6 +89,7 @@ errors.
 - Email: [danielngira@uchicago.edu](mailto:danielngira@uchicago.edu)
 - GitHub: [@danielngira](https://github.com/danielngira)
 - LinkedIn: [danielngira](https://www.linkedin.com/in/danielngira)
+- Website: [danielngira](https://www.danielngira.com)
 
 ---
 
