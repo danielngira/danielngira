@@ -1,127 +1,186 @@
-@import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=VT323&display=swap");
-@import url("https://fonts.gstatic.com");
-@import url("https://fonts.googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body.personal-mode {
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  background: #82aee3 url("./assets/images/bliss.webp") center / cover fixed no-repeat;
+  font-family: "VT323", "Courier New", monospace;
+}
 
 body.personal-mode,
 body.personal-mode * {
   cursor: url("./assets/images/pointer.png"), auto;
 }
 
-body.personal-mode {
-  background-image: url("./assets/images/bliss.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  box-sizing: border-box;
-  font-family: "VT323", monospace;
-  font-style: normal;
-  color: white;
+.personal-desktop-app {
+  min-height: 100vh;
+  padding: 28px 30px 78px;
+  isolation: isolate;
 }
 
-.container {
+.desktop-heading {
   display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 20px;
+  text-shadow: 0 1px 3px #193858;
+}
+
+.desktop-heading span:last-child {
+  padding-top: 3px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.desktop-icons {
+  display: flex;
+  width: 104px;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
+  margin: 54px 0 0 12px;
 }
 
-.folderContainer {
+.desktop-icon {
+  display: flex;
+  min-height: 88px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  position: relative;
-  top: 70px;
-  left: 20px;
-  margin: 5px;
-  align-content: center;
-  text-align: middle;
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-family: "VT323", monospace;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  background: transparent;
+  font: inherit;
+  font-size: 20px;
+  text-shadow: 0 1px 3px #14293e;
+  transition: background-color 140ms ease, border-color 140ms ease;
 }
 
-.folderContainer:hover {
-  cursor: pointer;
+.desktop-icon:hover,
+.desktop-icon:focus-visible {
+  border-color: rgba(255, 255, 255, 0.58);
+  background: rgba(30, 89, 148, 0.34);
 }
 
-.icon {
-  width: 60px;
-  height: 60px;
+.desktop-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: auto;
 }
 
-.folderName {
-  margin-top: 2px;
-  font-size: 1.25rem;
+.desktop-note {
+  position: absolute;
+  right: clamp(28px, 7vw, 100px);
+  bottom: 15vh;
+  display: grid;
+  width: min(290px, 38vw);
+  gap: 8px;
+  padding: 22px 24px;
+  transform: rotate(2deg);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 4px;
+  color: #20354b;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.91), rgba(238, 246, 251, 0.82));
+  box-shadow: 0 15px 35px rgba(20, 48, 70, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.desktop-note-label {
+  color: #52768d;
+  font: 500 10px/1.3 "DM Mono", monospace;
+  letter-spacing: 0.14em;
+}
+
+.desktop-note strong {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.desktop-note-mark {
+  position: absolute;
+  right: 17px;
+  bottom: 11px;
+  color: #789b65;
+  font: 22px sans-serif;
 }
 
 .taskbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: #245dda;
-  background: linear-gradient(
-    180deg,
-    rgba(75, 134, 245, 1) 0%,
-    rgba(47, 111, 232, 1) 18%,
-    rgba(36, 93, 218, 1) 45%,
-    rgba(29, 79, 194, 1) 72%,
-    rgba(18, 58, 154, 1) 100%
-  );
-  --taskbar-height: 8vh;
-  width: 100vw;
-  height: var(--taskbar-height);
-  margin: 0px;
-  border: 0px;
   position: fixed;
-  bottom: 0px;
-  left: 0px;
-  font-size: 1.5rem;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  gap: 16px;
+  padding: 5px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  background: linear-gradient(180deg, #3a8cf3 0%, #1767cc 45%, #0e4da9 100%);
+  box-shadow: 0 -3px 12px rgba(19, 49, 82, 0.18);
+  font-size: 20px;
 }
 
 .start {
-  background: #78ae43;
-  cursor: pointer;
-  background: linear-gradient(
-    180deg,
-    #c8f28a 0%,
-    #a9da69 12%,
-    #78ae43 42%,
-    #5e9b31 70%,
-    #347018 100%
-  );
-  border-radius: 30px;
-  width: 6%;
-  height: 70%;
-  margin-top: calc(var(--taskbar-height) * 0.15);
-  margin-bottom: calc(var(--taskbar-height) * 0.075);
-  margin-left: 0.5%;
-  align-content: center;
-  text-align: center;
+  display: flex;
+  height: 100%;
+  min-width: 102px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 15px;
+  border: 1px solid #9bd86a;
+  border-radius: 3px 16px 16px 3px;
+  color: #fff;
+  background: linear-gradient(#70b83e, #347c26);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.48), 1px 0 8px rgba(0, 0, 0, 0.2);
+  font: inherit;
+  text-shadow: 0 1px 2px #2a5c21;
+}
+
+.start span { font-size: 18px; }
+.start:hover { filter: brightness(1.08); }
+
+.taskbar-current {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  padding: 4px 12px;
+  border-left: 1px solid rgba(2, 42, 105, 0.48);
+  color: rgba(255, 255, 255, 0.9);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .clock {
-  background: #64a2d8;
-  cursor: pointer;
-  background: linear-gradient(
-    180deg,
-    #8ecbf0 0%,
-    #72b5e2 25%,
-    #64a2d8 50%,
-    #4d8fc7 78%,
-    #3978b1 100%
-  );
-  width: 8%;
-  height: 70%;
-  margin-top: calc(var(--taskbar-height) * 0.15);
-  margin-bottom: calc(var(--taskbar-height) * 0.075);
-  margin-right: 0.5%;
-  border-radius: 30px;
-  align-content: center;
+  min-width: 80px;
+  padding: 5px 10px;
+  border: 1px solid rgba(9, 55, 115, 0.32);
+  border-radius: 3px;
+  background: rgba(87, 163, 231, 0.7);
+  font-size: 18px;
   text-align: center;
 }
 
-.taskbarText {
-  margin: 0px;
+body.personal-mode p { margin: 0; }
+
+@media (max-width: 640px) {
+  .personal-desktop-app { padding: 20px 14px 70px; }
+  .desktop-heading { font-size: 17px; }
+  .desktop-heading span:last-child { display: none; }
+  .desktop-icons { margin: 34px 0 0; }
+  .desktop-note { right: 18px; bottom: 78px; width: min(240px, 58vw); padding: 16px; }
+  .desktop-note strong { font-size: 27px; }
+  .taskbar { height: 45px; gap: 8px; padding-inline: 6px; }
+  .start { min-width: 82px; padding-inline: 10px; }
+  .taskbar-current { padding-inline: 7px; }
+  .clock { min-width: 70px; padding-inline: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktop-icon { transition: none; }
 }

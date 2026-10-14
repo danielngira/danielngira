@@ -1,0 +1,21 @@
+.interests-page { max-width: 760px; margin: 0 auto; padding: 4px 0 24px; }
+.interests-page h1 { margin: 0 0 26px; color: #203e34; font: 570 clamp(32px, 5vw, 46px)/1.05 "Manrope", "DM Sans", sans-serif; letter-spacing: -.065em; }
+.golf-card {
+  max-width: 570px;
+  padding: clamp(21px, 4vw, 32px);
+  border: 1px solid #dbe5db;
+  border-radius: 11px;
+  background: radial-gradient(circle at 92% 10%, #e5eee1 0, transparent 36%), linear-gradient(145deg, #fff, #f4f7f1);
+  box-shadow: 0 12px 30px rgba(50, 80, 53, .07);
+}
+.golf-card-top { display: flex; align-items: center; justify-content: space-between; }
+.golf-icon { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid #d8e4d3; border-radius: 50%; background: #f3f7ee; font-size: 25px; }
+.golf-tag { padding: 6px 9px; border: 1px solid #d8e5d5; border-radius: 20px; color: #63805e; font: 600 9px "DM Mono", monospace; letter-spacing: .12em; }
+.golf-card h2 { margin: 22px 0 6px; color: #294735; font: 600 27px "Manrope", "DM Sans", sans-serif; letter-spacing: -.05em; }
+.golf-copy { max-width: 390px; margin: 0; color: #68776b; font-size: 14px; line-height: 1.65; }
+.handicap { display: flex; align-items: center; justify-content: space-between; margin-top: 25px; padding: 14px 0; border-top: 1px solid #e2e9df; border-bottom: 1px solid #e2e9df; }
+.handicap span { color: #829080; font: 600 10px "DM Mono", monospace; letter-spacing: .12em; }
+.handicap strong { color: #446747; font: 500 27px "Manrope", sans-serif; letter-spacing: -.05em; }
+.golf-tracking { display: flex; flex-wrap: wrap; gap: 7px 20px; margin-top: 16px; color: #758077; font-size: 12px; }
+.golf-tracking strong { color: #405d46; font-weight: 650; }
+.interest-note { margin: 20px 0 0; color: #8a938d; font-size: 11px; }
