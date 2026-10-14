@@ -2,11 +2,7 @@
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com");
 
-html {
-  cursor: url("../assets/images/pointer.png"), auto;
-}
-
-p {
+body.personal-mode p {
   margin: 0;
 }
 .modalContainer {

@@ -2,11 +2,12 @@
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com");
 
-html {
+body.personal-mode,
+body.personal-mode * {
   cursor: url("./assets/images/pointer.png"), auto;
 }
 
-body {
+body.personal-mode {
   background-image: url("./assets/images/bliss.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
